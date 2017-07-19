@@ -95,7 +95,7 @@ function getSimpleProject(username, password, project_id, keystone_url, cb)
 module.exports = {
   Glance: Glance,
   Keystone: Keystone,
-  keystonev2: keystonev2,
+  Keystonev2: Keystonev2,
   Neutron: Neutron,
   Octavia: Octavia,
   Nova: Nova,
