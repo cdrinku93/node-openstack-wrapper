@@ -1,4 +1,5 @@
 var Keystone = require('./lib/keystone');
+var Keystonev2 = require('./lib/keystonev2');
 var Glance = require('./lib/glance');
 var Neutron = require('./lib/neutron');
 var Octavia = require('./lib/octavia');
@@ -9,7 +10,7 @@ var Nova = require('./lib/nova');
 //ie: project.nova, project.glance, etc..
 function getSimpleProject(username, password, project_id, keystone_url, cb)
 {
-  var keystone = new Keystone(keystone_url);
+  var keystone = new Keystonev2(keystone_url);
   var return_object = {};
   var glance_url = '';
   var neutron_url = '';
@@ -94,6 +95,7 @@ function getSimpleProject(username, password, project_id, keystone_url, cb)
 module.exports = {
   Glance: Glance,
   Keystone: Keystone,
+  keystonev2: keystonev2,
   Neutron: Neutron,
   Octavia: Octavia,
   Nova: Nova,
